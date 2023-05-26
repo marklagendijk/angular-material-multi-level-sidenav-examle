@@ -1,6 +1,10 @@
 import * as _ from 'lodash';
 import { Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTreeModule } from '@angular/material/tree';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { filter } from 'rxjs/operators';
 import { NgIf } from '@angular/common';
@@ -13,13 +17,22 @@ import {
 
 /** @title Basic sidenav */
 @Component({
-  selector: 'sidenav-overview-example',
-  templateUrl: 'sidenav-overview-example.html',
-  styleUrls: ['sidenav-overview-example.css'],
+  selector: 'app-sidenav-menu',
+  templateUrl: 'sidenav-menu.component.html',
+  styleUrls: ['sidenav-menu.component.css'],
   standalone: true,
-  imports: [NgIf, MatSidenavModule],
+  imports: [
+    NgIf,
+    MatSidenavModule,
+    MatListModule,
+    RouterLink,
+    RouterLinkActive,
+    MatIconModule,
+    MatMenuModule,
+    MatTreeModule,
+  ],
 })
-export class SidenavOverviewExample {
+export class SidenavMenuComponent {
   menuTreeControl = new NestedTreeControl<MenuItem>(
     (menuItem) => menuItem.children
   );
