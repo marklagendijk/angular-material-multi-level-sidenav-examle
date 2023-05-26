@@ -6,3 +6,12 @@
   right: 0;
   background: #eee;
 }
+
+mat-nav-list div[role='group'] {
+  padding-left: 20px;
+}
+
+mat-nav-list mat-icon {
+  position: absolute;
+  right: 20px;
+}

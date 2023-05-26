@@ -25,23 +25,23 @@ export class SidenavOverviewExample {
   );
 
   menuItems: MenuItem[] = [
-    { type: 'link', link: 'dashboards', name: 'Dashboards' },
+    { type: 'link', link: 'home', name: 'Home' },
     {
       type: 'section',
-      name: 'Statistics',
+      name: 'SubItems 1',
       children: [
-        { type: 'link', link: 'site-statistics', name: 'Sites' },
-        { type: 'link', link: 'newsletters', name: 'Newsletters' },
-        { type: 'link', link: 'company-statistics', name: 'Companies' },
-        { type: 'link', link: 'articles', name: 'Articles' },
-        { type: 'link', link: 'banners', name: 'Banners' },
-        { type: 'link', link: 'pageviews', name: 'PageViews' },
-        { type: 'link', link: 'subscribers', name: 'Subscribers' },
-        { type: 'link', link: 'order-lines', name: 'Banner Sales' },
-        { type: 'link', link: 'translations', name: 'Translations' },
+        { type: 'link', link: 'item-1', name: 'Item 1' },
+        { type: 'link', link: 'item-2', name: 'Item 2' },
       ],
     },
-    { type: 'link', link: 'order-lines-export', name: 'Invoicing' },
+    {
+      type: 'section',
+      name: 'SubItems 2',
+      children: [
+        { type: 'link', link: 'item-3', name: 'Item 3' },
+        { type: 'link', link: 'item-4', name: 'Item 4' },
+      ],
+    },
   ];
 
   constructor(private router: Router) {
